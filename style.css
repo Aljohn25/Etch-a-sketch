@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column; 
+}
+header {
+    font-size: 30px;
+    color: white;
+    background-color: darkred;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    -webkit-text-stroke: 1px black;
+}
+
+h1 {
+    margin: 0;
+
+}
+
+main { 
+    display: flex;
+    flex: 1;
+    border-left: 30px solid darkred;
+    border-right: 30px solid darkred;
+}
+
+
+footer{
+    min-height:fit-content;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    background-color: darkred;
+    
+}
+
+h6{
+    min-height: fit-content;
+    font-size: 25px;
+    color: white;
+    -webkit-text-stroke: .3px black;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
