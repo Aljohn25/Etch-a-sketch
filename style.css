@@ -1,10 +1,13 @@
-body {
+html, body {
+    height: 100%;      
     margin: 0;
     padding: 0;
-    display: flex;
-    min-height: 100dvh;
-    flex-direction: column; 
 }
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     font-size: 30px;
     color: white;
@@ -20,15 +23,7 @@ h1 {
 
 }
 
-main { 
-    display: flex;
-    flex: 1;
-    border-left: 30px solid darkred;
-    border-right: 30px solid darkred;
-}
-
-
-footer{
+footer {
     min-height:fit-content;
     display: flex;
     margin: 0;
@@ -38,7 +33,7 @@ footer{
     
 }
 
-h6{
+h6 {
     min-height: fit-content;
     font-size: 25px;
     color: white;
@@ -46,3 +41,44 @@ h6{
     margin-top: 20px;
     margin-bottom: 15px;
 }
+
+main { 
+    display: flex;
+    flex: 1;              /* was height: 100% */
+    padding: 20px;
+    border-left: 30px solid darkred;
+    border-right: 30px solid darkred;
+    box-sizing: border-box;
+    flex-direction: column;
+   
+   
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 30px;
+}
+
+#sketchPad {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    max-height: 900px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    align-content: stretch;
+}
+
+.cell {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    outline: 1px solid #ddd;
+}
+    
