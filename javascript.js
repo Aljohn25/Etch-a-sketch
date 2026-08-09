@@ -62,18 +62,18 @@ createGrid(normalSize);
 const color = document.querySelector(".color");
 const colorPicker = document.querySelector("#colorPicker");
 
-let selectedColor = colorPicker.value; // Holds the current selected color
+let selectedColor = colorPicker.value; 
 
-// 1. When the user clicks your button, trigger the native color picker window
+
 color.onclick = function () {
   colorPicker.click();
 };
 
-// 2. When the user selects a new color, store its value
+
 colorPicker.addEventListener("input", (e) => {
   selectedColor = e.target.value;
   
-  // Optional: Update your button's border or background to show the selected color
+  
   colorBtn.style.borderColor = selectedColor;
 });
 
