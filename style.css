@@ -44,21 +44,24 @@ h6 {
 
 main { 
     display: flex;
-    flex: 1;              /* was height: 100% */
+    flex: 1;              
     padding: 20px;
     border-left: 30px solid darkred;
     border-right: 30px solid darkred;
     box-sizing: border-box;
     flex-direction: column;
-   
+    background-color: mistyrose;
+    align-items: center;
    
 }
 
 #buttons {
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin: 30px 0px;
+    width: 1000px;
+    
+
 }
 
 button {
@@ -66,14 +69,82 @@ button {
     font-size: 30px;
 }
 
+#resizeModal{
+    display: ;
+    background-color: lightgrey;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+   
+}
+
+/* Styles applied ONLY when the modal is open */
+#resizeModal[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.closeBtnResize {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.userInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+input {
+    width: 50px;
+    height: 15x;
+}
+
+.closeResize {
+    cursor: pointer;
+    padding: 2px 5px;
+    font-size: 15px;
+    height: fit-content;
+    width: fit-content;
+
+}
+
+.enter {
+    font-size: 20px;
+}
+
+.error {
+  
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+}
+
 #sketchPad {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
-    max-height: 900px;
+    height: 1000px;
+    width: 1000px;
     box-sizing: border-box;
     border: 2px solid grey;
     align-content: stretch;
+    background-color: white ;
+    margin-bottom: 30px;
+    
 }
 
 .cell {
@@ -81,4 +152,6 @@ button {
     border: 1px solid #ddd;
     outline: 1px solid #ddd;
 }
+
+
     
