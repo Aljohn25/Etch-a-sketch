@@ -23,23 +23,48 @@ const resize = document.querySelector(".resize");
 const resizeModal = document.querySelector("#resizeModal"); 
 const resizeInput = document.querySelector(".resizeInput");
 const enter = document.querySelector(".enter");
+const color = document.querySelector(".color")
+const colorModal = document.querySelector(".colorModal");
+
+color.onclick = function () {
+  colorModal.showModal();
+}
 
 resize.onclick = function() {
     resizeModal.showModal();
     resizeInput.focus();
 };
+
+const colorButtons = document.querySelectorAll('.colorSelect');
+
+
+  colorButtons.forEach(function(button) {
+
+    button.onclick = function() {
+    
+    colorButtons.forEach(btn => btn.classList.remove('clicked'));
+    button.classList.add('clicked');
+    }
+  });
+
 const resetModal = document.querySelector(".resetModal");
-const closeBtn = document.querySelectorAll(".closeResize, .noReset, .resetClose");
+const closeBtn = document.querySelectorAll(".resizeClose, .noReset, .resetClose, .colorClose, .colorCancel");
 
 closeBtn.forEach(function(btn) {
   btn.onclick = function(){
-    if (btn.classList.contains("closeResize")){
+    if (btn.classList.contains("resizeClose")){
     resizeModal.close();
     resizeInput.value = "";
     error.textContent = "";
     }
     if (btn.classList.contains("noReset") || btn.classList.contains("resetClose")){
     resetModal.close();
+    }
+    if (btn.classList.contains("colorClose")) {
+      colorModal.close();
+    }
+    if (btn.classList.contains("colorCancel")) {
+      colorModal.close();
     }
   }
 });
@@ -74,21 +99,6 @@ createGrid(normalSize);
 resetModal.close();
 }
 
-const color = document.querySelector(".color");
-const colorPicker = document.querySelector("#colorPicker");
-
-let selectedColor = colorPicker.value; 
 
 
-color.onclick = function () {
-  colorPicker.click();
-};
-
-
-colorPicker.addEventListener("input", (e) => {
-  selectedColor = e.target.value;
-  
-  
-  colorBtn.style.borderColor = selectedColor;
-});
 

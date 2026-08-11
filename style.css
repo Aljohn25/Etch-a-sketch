@@ -86,6 +86,7 @@ button.resize, button.resetBtn, button.color, button.draw, button.erase, button.
     background-color: whitesmoke;
     padding: 10px;
     border: 2px solid black;
+    
    
 }
 
@@ -120,7 +121,7 @@ input {
     height: 15x;
 }
 
-.closeResize {
+.resizeClose {
     cursor: pointer;
     padding: 2px 5px;
     font-size: 15px;
@@ -151,6 +152,96 @@ input {
   font-size: 12px;
   text-align: center;
   margin: 0;
+}
+
+.colorModal {
+    width: 175px;
+}
+.colorModal [open] {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.colorModalTop {
+    display:flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.colorModalBottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.colorModalButtons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.colorConfirm, .colorCancel {
+    font-size: 15px;
+}
+.colorPicker {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#colorPalette {
+    height: 25px;
+    width: 25px;
+    outline: 5px solid white;
+    outline-offset: -6px;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+
+}
+
+.colorSelect{
+    height: 25px;
+    width: 25px;
+    outline: 5px solid white;
+    outline-offset: -6px;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+}
+
+.colorSelect.clicked {
+    height: 25px;
+    width: 25px;
+    outline: 5px solid lightblue;
+    outline-offset: -6px;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+
+
+}
+
+.colorBox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#colorBlack {
+    background-color: black;
+}
+#colorRed {
+    background-color: red;
+}
+#colorBlue {
+    background-color: blue;
+}
+#colorGreen {
+    background-color: green;
+}
+#colorYellow {
+    background-color: yellow;
 }
 
 .resetModal[open] {

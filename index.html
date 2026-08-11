@@ -21,7 +21,7 @@
         <dialog id="resizeModal">
             <div class = closeBtnResize>
                 <p>RESIZE</p>
-            <button class="closeResize">X</button>
+            <button class="resizeClose">X</button>
             </div>
 
             <div class="userInput">
@@ -35,7 +35,37 @@
             
         </dialog>
         <button class="color">COLOR</button>
-        <input type="color" id="colorPicker" style="display: none;" value="#000000">
+
+        <dialog class="colorModal">
+            <div class="colorModalTop">
+            <p>COLOR</p>
+            <button class="colorClose">X</button>
+            </div>
+
+            <div class="colorModalSelect">
+
+                <div class="colorPicker">
+                <p>Choose color: </p>
+                <input id="colorPalette" class="colorSelect" type="color">
+                </div>
+
+                <div class="colorBox">
+                <button id="colorBlack" class="colorSelect" data-color="black"></button>
+                <button id="colorRed" class="colorSelect" data-color="red"></button>
+                <button id="colorGreen" class="colorSelect" data-color="green"></button>
+                <button id="colorBlue" class="colorSelect" data-color="blue"></button>
+                <button id="colorYellow" class="colorSelect" data-color="yellow"></button>
+                </div>
+                    
+                
+            </div>
+
+            <div class="colorModalButtons">
+                <button class="colorConfirm">CONFIRM</button>
+                <button class="colorCancel">CANCEL</button>
+            </div>
+            
+        </dialog>
 
         <button class="resetBtn">RESET</button>
         <dialog class="resetModal">
@@ -47,8 +77,8 @@
             <div class="resetModalBottom">
                 <p>Are you sure you want to reset?</p>
                 <div class="resetModalButtons">
-                    <button class="reset">yes</button>
-                    <button class="noReset">no</button>
+                    <button class="reset">YES</button>
+                    <button class="noReset">NO</button>
                 </div>
             </div>
         </dialog>
