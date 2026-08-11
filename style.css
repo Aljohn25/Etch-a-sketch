@@ -113,7 +113,6 @@ input {
     font-size: 15px;
     height: fit-content;
     width: fit-content;
-
 }
 
 .enter {
@@ -124,7 +123,6 @@ input {
 }
 
 .error {
-  
   bottom: 8px;
   left: 0;
   right: 0;
@@ -139,8 +137,6 @@ input {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    
-
 }
 
 .resetModalTop {
@@ -179,8 +175,7 @@ input {
     border: 2px solid grey;
     align-content: stretch;
     background-color: white ;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;   
 }
 
 .cell {
