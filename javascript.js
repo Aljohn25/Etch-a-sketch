@@ -3,7 +3,6 @@ let normalSize = 16;
 const sketchPad = document.querySelector("#sketchPad");
 
 function createGrid(size) {
-  const sketchPad = document.querySelector("#sketchPad");
   
   sketchPad.innerHTML = ""; 
 
@@ -29,13 +28,21 @@ resize.onclick = function() {
     resizeModal.showModal();
     resizeInput.focus();
 };
+const resetModal = document.querySelector(".resetModal");
+const closeBtn = document.querySelectorAll(".closeResize, .noReset, .resetClose");
 
-const closeResize = document.querySelector(".closeResize");
-closeResize.onclick = function() {
-  resizeModal.close();
-  resizeInput.value = "";
-  error.textContent = "";
-};
+closeBtn.forEach(function(btn) {
+  btn.onclick = function(){
+    if (btn.classList.contains("closeResize")){
+    resizeModal.close();
+    resizeInput.value = "";
+    error.textContent = "";
+    }
+    if (btn.classList.contains("noReset") || btn.classList.contains("resetClose")){
+    resetModal.close();
+    }
+  }
+});
 
 const error = document.querySelector(".error");
 
@@ -53,10 +60,17 @@ enter.onclick = function() {
   }
 };
 
+const resetBtn = document.querySelector(".resetBtn");
+
+
+resetBtn.onclick = function() {
+  resetModal.showModal();
+}
 const reset = document.querySelector(".reset");
 
 reset.onclick = function() {
 createGrid(normalSize);
+resetModal.close();
 }
 
 const color = document.querySelector(".color");

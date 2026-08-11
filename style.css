@@ -70,15 +70,12 @@ button {
 }
 
 #resizeModal{
-    display: ;
-    background-color: lightgrey;
+    background-color: whitesmoke;
     padding: 10px;
     border: 2px solid black;
-    border-radius: 10px;
    
 }
 
-/* Styles applied ONLY when the modal is open */
 #resizeModal[open] {
   display: flex;
   flex-direction: column;
@@ -121,6 +118,9 @@ input {
 
 .enter {
     font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 .error {
@@ -132,6 +132,42 @@ input {
   font-size: 12px;
   text-align: center;
   margin: 0;
+}
+
+.resetModal[open] {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    
+
+}
+
+.resetModalTop {
+    display:flex;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+
+}
+
+.resetClose {
+    padding: 2px 5px;
+    font-size: 15px;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+}
+
+.resetModalButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.reset, .noReset {
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
 #sketchPad {

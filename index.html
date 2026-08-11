@@ -15,6 +15,7 @@
     <main>
         
     <div id="buttons">
+        <div class="buttonsTop">
         <button class="resize">RESIZE</button>
 
         <dialog id="resizeModal">
@@ -34,11 +35,25 @@
             
         </dialog>
         
+        <button class="resetBtn">RESET</button>
+        <dialog class="resetModal">
+            <div class="resetModalTop">
+            <p>RESET</p>
+            <button class="resetClose">X</button>
+            </div>
+
+            <div class="resetModalBottom">
+                <p>Are you sure you want to reset?</p>
+                <div class="resetModalButtons">
+                    <button class="reset">yes</button>
+                    <button class="noReset">no</button>
+                </div>
+            </div>
+        </dialog>
         
-        <button class="reset">RESET</button>
         <button class="color">COLOR</button>
         <input type="color" id="colorPicker" style="display: none;" value="#000000">
-
+        </div>
     </div>    
     <div id="sketchPad"></div>
    
