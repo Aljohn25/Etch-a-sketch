@@ -1,5 +1,7 @@
 let normalSize = 16;
 let currentMode = "click";
+let currentColor = "black";
+
 
 const sketchPad = document.querySelector("#sketchPad");
 
@@ -21,33 +23,42 @@ function createGrid(size) {
   }
 }
 
+const erase = document.querySelector(".erase");
+
+erase.onclick = function() {
+  if (erase.textContent === "ERASE:ON"){
+    erase.textContent = "ERASE:OFF";
+    currentColor = "black";
+  }
+  else {
+    erase.textContent = "ERASE:ON";
+    currentColor = "white";
+  }
+
+}
 
 function hoverMode() {
   if (currentMode === "hover"){
-  this.classList.add('painted');
+  this.className = `cell ${currentColor}`;
   }
 }
 
 function clickMode() {
   if (currentMode === "click"){
-  this.classList.add('painted');
+  this.className = `cell ${currentColor}`;
   }
 }
 const draw = document.querySelector(".draw");
 
 draw.onclick = function(){
   if (draw.textContent === "TRACE") {
-    currentMode = "click"
+    currentMode = "click";
     draw.textContent = "CLICK";
   }
   else {
     currentMode = "hover";
     draw.textContent = "TRACE";
   }
-}
-
-function setDrawMode(newMode) {
-  currentMode = newMode;
 }
 
 createGrid(normalSize);
@@ -129,8 +140,13 @@ const reset = document.querySelector(".reset");
 
 reset.onclick = function() {
 createGrid(normalSize);
+draw.textContent = "CLICK";
+currentMode = "click";
 resetModal.close();
 }
+
+
+
 
 
 

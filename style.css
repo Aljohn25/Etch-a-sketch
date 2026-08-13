@@ -308,6 +308,11 @@ input {
     width: 50px;
 }
 
+.erase {
+    display: flex;
+    justify-content: center;
+}
+
 #sketchPad {
     display: flex;
     flex-wrap: wrap;
@@ -327,8 +332,12 @@ input {
     background-color: white;
 }
 
-.cell.painted {
-  background-color: black;
+.cell.black {
+    background-color: black;
+}
+
+.cell.white {
+    background-color: white;
 }
 
 
