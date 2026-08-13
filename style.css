@@ -228,6 +228,12 @@ input {
     margin-bottom: 10px;
 }
 
+.colorBox2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
 #colorBlack {
     background-color: black;
 }
@@ -243,7 +249,30 @@ input {
 #colorYellow {
     background-color: yellow;
 }
-
+#colorPurple {
+    background-color: purple;
+}
+#colorGrey {
+    background-color: grey;
+}
+#colorOrange {
+    background-color: orange;
+}
+#colorYellowGreen {
+    background-color: yellowgreen;
+}
+#colorGrey {
+    background-color: grey;
+}
+#colorLightBlue {
+    background-color: lightblue;
+}
+#colorGold {
+    background-color: gold;
+}
+#colorIndigo {
+    background-color: indigo;
+}
 .resetModal[open] {
     background-color: whitesmoke;
     display: flex;
@@ -295,6 +324,11 @@ input {
     box-sizing: border-box;
     border: 1px solid #ddd;
     outline: 1px solid #ddd;
+    background-color: white;
+}
+
+.cell.painted {
+  background-color: black;
 }
 
 

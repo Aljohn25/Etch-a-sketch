@@ -1,4 +1,5 @@
 let normalSize = 16;
+let currentMode = "click";
 
 const sketchPad = document.querySelector("#sketchPad");
 
@@ -9,7 +10,9 @@ function createGrid(size) {
   const totalCells = size * size;
   for (let i = 0; i < totalCells; i++) {
     const cell = document.createElement("div");
-   cell.classList.add("cell");
+    cell.classList.add("cell");
+    cell.addEventListener('mouseover', hoverMode);
+    cell.addEventListener('click', clickMode);
 
     cell.style.width = `calc(100% / ${size})`;
     cell.style.height = `calc(100% / ${size})`;
@@ -17,6 +20,36 @@ function createGrid(size) {
     sketchPad.appendChild(cell);
   }
 }
+
+
+function hoverMode() {
+  if (currentMode === "hover"){
+  this.classList.add('painted');
+  }
+}
+
+function clickMode() {
+  if (currentMode === "click"){
+  this.classList.add('painted');
+  }
+}
+const draw = document.querySelector(".draw");
+
+draw.onclick = function(){
+  if (draw.textContent === "TRACE") {
+    currentMode = "click"
+    draw.textContent = "CLICK";
+  }
+  else {
+    currentMode = "hover";
+    draw.textContent = "TRACE";
+  }
+}
+
+function setDrawMode(newMode) {
+  currentMode = newMode;
+}
+
 createGrid(normalSize);
 
 const resize = document.querySelector(".resize");
