@@ -20,7 +20,7 @@ function createGrid(size) {
     const cell = document.createElement("div");
     cell.classList.add("cell");
     
-    cell.addEventListener('mouseover', hoverMode);
+    cell.addEventListener("mouseover", hoverMode);
     cell.addEventListener("mouseover", clickMode);
     cell.addEventListener('mousedown', clickMode);
 
@@ -40,7 +40,7 @@ erase.onclick = function() {
   }
   else {
     erase.textContent = "ERASE:ON";
-    currentColor = "white";
+    currentColor = "#f8f9fa";
   }
 
 }
@@ -52,7 +52,12 @@ function hoverMode(e) {
 }
 
 function clickMode(e) {
-  if  (e.type === "mouseover" && !isMouseDown) return;
+  if (e.type === "mousedown") {
+    e.preventDefault();
+  }
+  if (currentMode === "click" && e.type === "mouseover" && !isMouseDown) {
+    return;
+  }
     
   this.className = "cell " + currentColor ;
   }
@@ -95,8 +100,6 @@ color.onclick = function () {
   });
 };
   
-
-
 resize.onclick = function() {
     resizeModal.showModal();
     resizeInput.focus();
@@ -181,6 +184,9 @@ const reset = document.querySelector(".reset");
 
 reset.onclick = function() {
 createGrid(normalSize);
+erase.textContent = "ERASE:OFF";
+currentColor = selectedColor;
+tempSelectedColor = selectedColor;
 draw.textContent = "MODE:CLICK";
 currentMode = "click";
 resetModal.close();

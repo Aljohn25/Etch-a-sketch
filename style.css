@@ -11,7 +11,7 @@ body {
 header {
     font-size: 30px;
     color: white;
-    background-color: darkred;
+    background-color: #1d1e2c;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -29,7 +29,7 @@ footer {
     margin: 0;
     padding: 0;
     justify-content: center;
-    background-color: darkred;
+    background-color: #1d1e2c;
     
 }
 
@@ -46,11 +46,11 @@ main {
     display: flex;
     flex: 1;              
     padding: 20px;
-    border-left: 30px solid darkred;
-    border-right: 30px solid darkred;
+    border-left: 30px solid #1d1e2c;
+    border-right: 30px solid #1d1e2c;
     box-sizing: border-box;
     flex-direction: column;
-    background-color: mistyrose;
+    background-color: grey;
     align-items: center;
    
 }
@@ -118,7 +118,7 @@ p {
 
 input {
     width: 50px;
-    height: 15x;
+    height: 15px;
 }
 
 .resizeClose {
@@ -257,9 +257,6 @@ input {
 #colorYellowGreen {
     background-color: yellowgreen;
 }
-#colorGrey {
-    background-color: grey;
-}
 #colorLightBlue {
     background-color: lightblue;
 }
@@ -322,17 +319,17 @@ input {
     height: 1000px;
     width: 1000px;
     box-sizing: border-box;
-    border: 2px solid grey;
+    border: 2px solid black;
     align-content: stretch;
-    background-color: white ;
+    background-color: lightgrey ;
     margin-bottom: 10px;   
 }
 
 .cell {
     box-sizing: border-box;
-    border: 1px solid #ddd;
-    outline: 1px solid #ddd;
-    background-color: white;
+    border: 1px solid lightgrey;
+    outline: 1px solid lightgrey;
+    background-color: #f8f9fa;
 }
 
 .cell.black {
