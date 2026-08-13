@@ -59,7 +59,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px 0px;
+    margin: 10px 0px;
     width: 1000px;
     gap: 20px;
     
@@ -184,22 +184,18 @@ input {
     justify-content: space-around;
 }
 
-.colorConfirm, .colorCancel {
-    font-size: 15px;
-}
-.colorPicker {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-#colorPalette {
-    height: 25px;
-    width: 25px;
-    outline: 5px solid white;
-    outline-offset: -6px;
-    border: 2px solid whitesmoke;
+.colorClose {
     cursor: pointer;
+    padding: 2px 5px;
+    font-size: 15px;
+    height: fit-content;
+    width: fit-content;
+}
 
+.colorConfirm, .colorCancel {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
 }
 
 .colorSelect{
@@ -214,9 +210,9 @@ input {
 .colorSelect.clicked {
     height: 25px;
     width: 25px;
-    outline: 5px solid lightblue;
+    outline: 5px solid whitesmoke;
     outline-offset: -6px;
-    border: 2px solid whitesmoke;
+    border: 2px solid black;
     cursor: pointer;
 
 
@@ -301,6 +297,8 @@ input {
     justify-content: space-evenly;
 }
 .reset, .noReset {
+    display: flex;
+    justify-content: center;
     font-size: 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -309,6 +307,11 @@ input {
 }
 
 .erase {
+    display: flex;
+    justify-content: center;
+}
+
+.draw {
     display: flex;
     justify-content: center;
 }
@@ -322,7 +325,7 @@ input {
     border: 2px solid grey;
     align-content: stretch;
     background-color: white ;
-    margin-bottom: 30px;   
+    margin-bottom: 10px;   
 }
 
 .cell {
@@ -338,6 +341,50 @@ input {
 
 .cell.white {
     background-color: white;
+}
+
+.cell.red {
+    background-color: red;
+}
+
+.cell.blue {
+    background-color: blue;
+}
+
+.cell.green {
+    background-color: green;
+}
+
+.cell.yellow {
+    background-color: yellow;
+}
+
+.cell.purple {
+    background-color: purple;
+}
+
+.cell.grey {
+    background-color: grey;
+}
+
+.cell.orange {
+    background-color: orange;
+}
+
+.cell.yellowgreen {
+    background-color: yellowgreen;
+}
+
+.cell.lightblue {
+    background-color: lightblue;
+}
+
+.cell.gold {
+    background-color: gold;
+}
+
+.cell.indigo {
+    background-color: indigo;
 }
 
 
