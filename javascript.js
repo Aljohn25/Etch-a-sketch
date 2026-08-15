@@ -45,7 +45,7 @@ erase.onclick = function() {
 
 }
 
-function hoverMode(e) {
+function hoverMode() {
   if  (currentMode === "hover") {
   this.className = `cell ${currentColor}`;
   }
@@ -192,6 +192,26 @@ draw.textContent = "MODE:CLICK";
 currentMode = "click";
 resetModal.close();
 }
+
+const save = document.querySelector(".save");
+
+save.onclick = function() {
+  html2canvas(sketchPad, { useCORS: true }).then(canvas => {
+                
+  const imageURL = canvas.toDataURL("image/png");
+
+  const downloadLink = document.createElement('a');
+  downloadLink.href = imageURL;
+  downloadLink.download = 'my-sketch.png'; 
+
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+
+  });
+
+}
+
 
 
 
