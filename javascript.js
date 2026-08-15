@@ -170,6 +170,7 @@ enter.onclick = function() {
   } else {
     error.textContent = "Invalid size! Enter 1-100."
     error.style.color = "red";
+    resizeInput.value = "";
     resizeInput.focus();
   }
 };
