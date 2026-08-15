@@ -73,6 +73,12 @@ button.resize, button.resetBtn, button.color, button.draw, button.erase, button.
     border-radius: 10px;
     border: 2px solid grey;
     cursor: pointer;
+    
+}
+
+button.resize:hover, button.resetBtn:hover, button.color:hover, button.draw:hover, button.erase:hover, button.save:hover {
+    background-color: lightgrey;
+    color: grey;
 }
 
 .buttonsTop, .buttonsBottom{
@@ -190,6 +196,11 @@ input {
     font-size: 15px;
     height: fit-content;
     width: fit-content;
+}
+
+.colorClose:hover, .resizeClose:hover, .resetClose:hover  {
+    background-color: darkgrey;
+    color: red;
 }
 
 .colorConfirm, .colorCancel {
@@ -382,6 +393,10 @@ input {
 
 .cell.indigo {
     background-color: indigo;
+}
+
+.enter:hover, .colorConfirm:hover, .colorCancel:hover, .reset:hover, .noReset:hover {
+    background-color: lightblue;
 }
 
 
