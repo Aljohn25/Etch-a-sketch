@@ -287,6 +287,18 @@ input {
     margin-bottom: 10px;
 }
 
+.colorBox3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.colorBox4 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
 
 #colorBlack {
     background-color: black;
@@ -345,6 +357,43 @@ input {
 
 #colorIndigo {
     background-color: indigo;
+}
+
+#colorBrown {
+    background-color: brown;
+}
+#colorDarkRed {
+    background-color: darkred;
+}
+#colorDarkGreen {
+    background-color: darkgreen;
+}
+#colorDarkBlue {
+    background-color: darkblue;
+}
+#colorPink {
+    background-color: pink;
+}
+#colorMagenta {
+    background-color: magenta;
+}
+#colorTan {
+    background-color: tan;
+}
+#colorSalmon {
+    background-color: salmon;
+}
+#colorTeal {
+    background-color: teal;
+}
+#colorCyan {
+    background-color: cyan;
+}
+#colorCoral {
+    background-color: coral;
+}
+#colorPlum {
+    background-color: plum;
 }
 
 
@@ -493,6 +542,54 @@ input {
 
 .cell.indigo {
     background-color: indigo;
+}
+
+.cell.brown {
+    background-color: brown;
+}
+
+.cell.darkred {
+    background-color: darkred;
+}
+
+.cell.darkgreen {
+    background-color: darkgreen;
+}
+
+.cell.darkblue {
+    background-color: darkblue;
+}
+
+.cell.pink {
+    background-color: pink;
+}
+
+.cell.magenta {
+    background-color: magenta;
+}
+
+.cell.tan {
+    background-color: tan;
+}
+
+.cell.salmon {
+    background-color: salmon;
+}
+
+.cell.teal {
+    background-color: teal;
+}
+
+.cell.cyan {
+    background-color: cyan;
+}
+
+.cell.coral {
+    background-color: coral;
+}
+
+.cell.plum {
+    background-color: plum;
 }
 
 
