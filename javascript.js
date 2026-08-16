@@ -162,7 +162,8 @@ const error = document.querySelector(".error");
 enter.onclick = function() {
 
     const newSize = Number(resizeInput.value);
-    if (newSize > 0 && newSize <= 100) {
+    
+  if (Number.isInteger(newSize) && newSize > 0 && newSize <= 100) {
     createGrid(newSize); 
     resizeModal.close();  
     resizeInput.value = ""; 
